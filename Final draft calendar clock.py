@@ -10,7 +10,7 @@ master.title("Digital Clock")
 def get_time():
     timevar = time.strftime("%I:%M:%S %p")
     clock.config(text=timevar)
-    clock.after(200, get_time)
+    clock.after(1000, get_time)
 
 # Create clock label - uncomment this!
 clock = Label(master, font=("Calibri", 70), bg="white", fg="black")
