@@ -1,2 +1,2 @@
 # Labs
-This repository serves as a showcase of my proficiency in Python, highlighting my current skills for potential recruiters and professional networks.
+I am actively refining my understanding of GitHub, and this repository serves as a professional showcase of my Python expertise, highlighting my technical proficiency for recruiters and industry networks.
