@@ -6,8 +6,7 @@ import time
     "User-Agent": "Edg/137.0.3296.83 (Windows NT 10.0; Win64; x64)"
 }
 
-#url1 = "https://assets.barchart.com/img/throbber.svg" 
-#url2: https://www.barchart.com/stocks/quotes/-SAMI/components?viewName=technical&orderBy=symbolName&orderDir=asc
+url: https://www.barchart.com/stocks/quotes/-SAMI/components?viewName=technical&orderBy=symbolName&orderDir=asc
  
 time.sleep(5)
 
