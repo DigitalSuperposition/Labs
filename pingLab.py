@@ -1,7 +1,7 @@
 import subprocess
 
 #Global Variable
-result = subprocess.run(["ping",  "google.com"], capture_output=True, text=True, check=True]) #Make a simpler global variable
+result = subprocess.run(["ping",  "google.com"], stdout=subprocess.pipe, stdin=subprocess.pipe capture_output=True, text=True, check=True]) #Make a simpler global variable
     
 try: 
     print(result) 
