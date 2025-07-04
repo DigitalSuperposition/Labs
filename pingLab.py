@@ -1,11 +1,16 @@
 import subprocess
 
-#Global Variable
-result = subprocess.run(["ping",  "google.com"], stdout=subprocess.pipe, stdin=subprocess.pipe capture_output=True, text=True, check=True]) #Make a simpler global variable
-    
-try: 
-    print(result) 
+# Global Variable
+result = subprocess.run(
+    ["ping", "google.com"],
+    stdout=subprocess.PIPE,
+    stdin=subprocess.PIPE,
+    text=True,
+    check=True
+)
 
-except:
-    subprocess.CalledProcessError 	
+try:
+    print(result)
+
+except subprocess.CalledProcessError as e:
     print(result.stderr)
