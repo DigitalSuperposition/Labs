@@ -1,0 +1,23 @@
+import smtplib
+import datetime
+from email.message import EmailMessage
+
+#server configuration
+def server_conn():
+	server = smtplib.SMTP(HQQUA3030.rcen.marines.usmc.mil, 
+	server.starttls()
+	server.login(ammon.fasusi.ctr@marines.usmc.mil, ⁭)
+	server.sendmail(sender_email, receive_email, message.as_string())
+	server.quit()
+	print("email sent sent successfully!")
+
+#email box
+sender_email = ammon.fasusi.ctr@marines.usmc.mil
+receiver_email = ammon.fasusi.ctr@marines.usmc.mil
+subject = python test email
+body = """This is a test email sent from python script, 
+			 if this goes through, congratulations, this means that the email sent through script was sucessful"""
+
+
+
+
