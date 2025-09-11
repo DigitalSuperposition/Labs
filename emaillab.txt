@@ -3,7 +3,7 @@ import datetime
 from email.message import EmailMessage
 
 #server configuration
-def server_conn():
+def server_conn(sender_mail, receive_email,):
 	starttls(context=context)
 	server.login(sender_email, input("Enter pin:"))
 	server.sendmail(sender_email, receive_email, message.as_string())
@@ -30,3 +30,4 @@ except Exception as e:
 		
 finally:
 	server.quit()
+
