@@ -1,13 +1,11 @@
 from smtplib import SMTP
 from email.message import EmailMessage
 from getpass import getpass #encrypt
-import time
 import smtplib
-import schedule
-import os
+
 
 #EmailMessage information
-sender_email = "first.last@email.com"
+sender_email = "email"
 receiver_email = sender_email
 subject = "python test email"
 body = """This is a test email sent from python script,if this goes through, congratulations, this means that the email sent through script was sucessful."""
@@ -22,12 +20,12 @@ msg.set_content(body + "\n Sent using Python smtplib")
 
 
 
-#Client Frontend SERVER, All available IPv4/6
-with smtplib.SMTP(host='server.domain.FQDN', port=587) as server:
+#Client Frontend server, All available IPv4/6
+with smtplib.SMTP(host='FQDN', port=587) as server:
     response = server.ehlo()
     server.starttls()
-    pin = getpass("Enter pin: ")
-    server.login("firstname.lastname@email.com", pin)
+   # pin = getpass("Enter pin: ")
+    server.login( "email", """pin/password""")
     server.send_message(msg)
     traf_res = server.set_debuglevel(1)
     server.quit()
