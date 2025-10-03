@@ -21,6 +21,8 @@ commands = [
     "Install-WindowsUpdate",
     r'findstr /c:"[SR]" %windir%\\logs\\cbs\\cbs.log'  
 ]
+
+is_admin()
 for command in commands:
 	process = subprocess.Popen(command, shell = True)
 	process.wait()
