@@ -1,0 +1,21 @@
+from win32com.client import Dispatchex
+import win32com.client as win32
+
+# local
+outlook = win32.Dispatchex(outlook.application)
+
+# remote server
+outlook = win32.Dispatchex(outlook.application,  """ FQDN or IP """)
+
+# Create a new mail item
+maii = outlook.CreateItem(0)
+
+# Mail Outlook parameters
+mail.From = "ammon.fasusi.ctr@marines.usmc.mil"
+mail.To = "first.last@example.com"
+mail.Subject = "Python test email with WIN32"
+mail.Body = """ This is a test email using python's py32 library which allows for interacting with windows COM and DCOM object models (apps and services), 
+					if your reading this then congrats!!! the email has sent successfully. """
+
+# Send the email
+mail.Send()
