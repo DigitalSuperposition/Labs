@@ -1,0 +1,27 @@
+#import os
+import subprocess
+import ctypes, sys
+def is_admin():
+    try:
+        return ctypes.windll.shell32.IsUserAnAdmin()
+    except:
+        return False
+if not is_admin():
+    # Re-run the script with admin rights
+    ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+else:
+    # Code that needs admin privileges
+    pass
+commands = [
+    "sfc /scannow",
+    "dism /online /cleanup-image /restorehealth",
+    "gpupdate /force",
+    "Install-Module PSWindowsUpdate -Force",      
+    "Get-WindowsUpdate",
+    "Install-WindowsUpdate",
+    r'findstr /c:"[SR]" %windir%\\logs\\cbs\\cbs.log'  
+]
+for command in commands:
+	process = subprocess.Popen(command, shell = True)
+	process.wait()
+print(subprocess.stderr, subprocess.stdout)  
