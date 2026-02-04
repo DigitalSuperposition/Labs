@@ -1,3 +1,3 @@
-best = Ammon
+best = 'Ammon'
 
-print(f"Hello best")
+print(f"Hello", best)
